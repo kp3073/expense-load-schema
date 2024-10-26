@@ -1,3 +1,3 @@
 git clone https://github.com/kp3073/${COMPONENT}
 cd $COMPONENT/schema
-mysql -h${RDS_ENDPOINT} -u${RDS_USER} -p${RDS_PASS} <${COMPONENT}.sql
+mysql -h${DBHOST} -u${DBUSER} -p${DBPASS} <${COMPONENT}.sql
