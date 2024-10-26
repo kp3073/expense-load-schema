@@ -22,20 +22,20 @@ pipeline {
 //
 //       }
 //     }
-
-    stage('Unit Tests'){
-      when {
-        allOf {
-          branch 'main'
-          expression { env.TAG_NAME != env.GIT_BRANCH }
-        }
-      }
-      steps {
-        // Ideally we should run the tests , But here the developer have skipped it. So assuming those are good and proceeding
-        // sh 'npm test'
-        echo 'CI'
-      }
-    }
+//
+//     stage('Unit Tests'){
+//       when {
+//         allOf {
+//           branch 'main'
+//           expression { env.TAG_NAME != env.GIT_BRANCH }
+//         }
+//       }
+//       steps {
+//         // Ideally we should run the tests , But here the developer have skipped it. So assuming those are good and proceeding
+//         // sh 'npm test'
+//         echo 'CI'
+//       }
+//     }
 
        stage('Release'){
          when {
