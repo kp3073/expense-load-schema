@@ -5,4 +5,4 @@ RUN         sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS
 COPY        mongo.repo /etc/yum.repos.d/mongo.repo
 RUN         yum install git mysql mongodb-org-shell -y
 COPY        run.sh /
-ENTRYPOINT  ["bash", "/run.sh"]
+ENTRYPOINT  ["bash", "-x","/run.sh"]
