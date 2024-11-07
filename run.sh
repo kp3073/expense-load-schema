@@ -1,3 +1,4 @@
+set +x
 source /config/params
 
 git clone https://github.com/kp3073/${COMPONENT}
